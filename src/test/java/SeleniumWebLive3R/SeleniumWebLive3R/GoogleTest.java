@@ -23,7 +23,7 @@ public class GoogleTest {
 	// Called once before all tests run
 	@BeforeClass
 	public static void setupOnce(){
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\siama\\workspace\\SeleniumWebExamples\\geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "C:\\Users\\siama\\workspace\\SeleniumWebExamples\\geckodriver");
 		driver = new FirefoxDriver();
 		wait = new WebDriverWait(driver, 3);
 		System.out.println("@BeforeClass setupOnce()");
@@ -37,24 +37,24 @@ public class GoogleTest {
 		actual = "";
 	}
 	
-	@Test (timeout = 3000)
-	public void testResultStats(){
-		//Prepare
-		System.out.println("Preparing - testResultStats()");
-		expected = "41 700";
-		String input = "Testautomatisering";
-		String inputId = "lst-ib";
-		String searchId = "_fZl";
-		String resultId = "resultStats";
-		//Act
-		System.out.println("Act - testResultStats()");
-		driver.findElement(By.id(inputId)).sendKeys(input);
-		driver.findElement(By.id(searchId)).click();
-		WebElement result = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(resultId)));
-		//Assert
-		System.out.println("Assert - testResultStats()");
-		Assert.assertTrue("ResultStatsTest Fail", result.getText().contains(expected));
-	}
+//	@Test (timeout = 3000)
+//	public void testResultStats(){
+//		//Prepare
+//		System.out.println("Preparing - testResultStats()");
+//		expected = "41 700";
+//		String input = "Testautomatisering";
+//		String inputId = "lst-ib";
+//		String searchId = "_fZl";
+//		String resultId = "resultStats";
+//		//Act
+//		System.out.println("Act - testResultStats()");
+//		driver.findElement(By.id(inputId)).sendKeys(input);
+//		driver.findElement(By.id(searchId)).click();
+//		WebElement result = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(resultId)));
+//		//Assert
+//		System.out.println("Assert - testResultStats()");
+//		Assert.assertTrue("ResultStatsTest Fail", result.getText().contains(expected));
+//	}
 	
 	@Test
 	public void testGetTitle(){
