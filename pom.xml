@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <webdriver.gecko.driver>C:\Users\siama\workspace\SeleniumWebExamples\geckodriver</webdriver.gecko.driver>
+        <webdriver.gecko.driver>C:\Users\siama\workspace\SeleniumWebExamples\geckodriver.exe</webdriver.gecko.driver>
     </properties>
     <dependencies>
         <dependency>
