@@ -23,6 +23,7 @@ public class GoogleTest {
 	// Called once before all tests run
 	@BeforeClass
 	public static void setupOnce(){
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\siama\\workspace\\SeleniumWebExamples\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		wait = new WebDriverWait(driver, 3);
 		System.out.println("@BeforeClass setupOnce()");
